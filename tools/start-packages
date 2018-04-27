@@ -1,0 +1,9 @@
+#!/bin/sh
+echo "Starting Packages Server ..."
+
+service nginx restart
+service ssh restart
+servide proftpd restart
+/usr/bin/mini-dinstall
+
+tail -f /var/log/nginx/error.log
